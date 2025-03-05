@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
 import GlobalStyles from './globalStyles';
+import { WalletConnectionProvider } from './components/wallet/WalletConnect';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
@@ -13,19 +14,21 @@ import Footer from './components/layout/Footer';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Tokenomics />
-        <Roadmap />
-        <Whitepaper />
-        <Team />
-      </main>
-      <Footer />
-    </ThemeProvider>
+    <WalletConnectionProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Tokenomics />
+          <Roadmap />
+          <Whitepaper />
+          <Team />
+        </main>
+        <Footer />
+      </ThemeProvider>
+    </WalletConnectionProvider>
   );
 }
 

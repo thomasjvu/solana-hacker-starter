@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { theme } from '../../theme';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import WalletConnect from '../wallet/WalletConnect';
 import { List, X } from '@phosphor-icons/react';
 
 const NavbarWrapper = styled.header`
@@ -174,6 +175,8 @@ const Navbar: React.FC = () => {
             <Button size="small" as="a" href="#whitepaper">WHITEPAPER</Button>
             <Button size="small" variant="danger">BUY TOKEN</Button>
           </ButtonWrapper>
+          <div style={{ width: '1rem' }} />
+          <WalletConnect />
         </NavMenu>
         
         <MobileMenuButton onClick={toggleMobileMenu}>
@@ -196,6 +199,8 @@ const Navbar: React.FC = () => {
               <Button fullWidth as="a" href="#whitepaper">WHITEPAPER</Button>
               <div style={{ height: '1rem' }} />
               <Button fullWidth variant="danger">BUY TOKEN</Button>
+              <div style={{ height: '1rem' }} />
+              <WalletConnect />
             </MobileMenu>
           )}
         </AnimatePresence>

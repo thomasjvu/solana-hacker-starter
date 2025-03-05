@@ -12,7 +12,8 @@ import {
   ChartLine, 
   LockKey, 
   Lightbulb, 
-  ChartBar 
+  ChartBar,
+  Eye
 } from '@phosphor-icons/react';
 
 const WhitepaperSection = styled.section`
@@ -309,7 +310,15 @@ const Whitepaper: React.FC = () => {
                 <Download size={20} weight="bold" style={{ marginRight: '0.5rem' }} />
                 Download PDF
               </Button>
-              <Button size="large" variant="secondary">
+              <Button 
+                size="large" 
+                variant="secondary"
+                as="a" 
+                href="https://example.com/hyper-token-whitepaper" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Eye size={20} weight="bold" style={{ marginRight: '0.5rem' }} />
                 View Online
               </Button>
             </ButtonGroup>
